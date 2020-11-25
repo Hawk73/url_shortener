@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  post 'urls', to: 'url_records#create'
+  get 'urls/:id', to: 'url_records#show', as: :url_record
+  get 'urls/:id/stats', to: 'url_records#stats'
 end
